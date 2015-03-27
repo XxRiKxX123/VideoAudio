@@ -1,0 +1,89 @@
+﻿@model BL.MaterialModels.MaterialEdit
+
+@{
+    var create = Resx.MaterialStrings.create;
+    var newmaterial = Resx.MaterialStrings.newmaterial;
+    var redact = Resx.MaterialStrings.redact;
+    var backtolist = Resx.MaterialStrings.bacltolist;
+    var editmaterial = Resx.MaterialStrings.editmaterial;
+}
+@{
+    ViewBag.Title = @redact;
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h3>@Html.Encode(editmaterial)</h3>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Annotation, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Annotation)
+                @Html.ValidationMessageFor(model => model.Annotation)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Category, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Category)
+                @Html.ValidationMessageFor(model => model.Category)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Type, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Type)
+                @Html.ValidationMessageFor(model => model.Type)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SizeFile, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SizeFile)
+                @Html.ValidationMessageFor(model => model.SizeFile)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NameFile, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NameFile)
+                @Html.ValidationMessageFor(model => model.NameFile)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value=@redact class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink(backtolist, "Index", "Home")
+</div>

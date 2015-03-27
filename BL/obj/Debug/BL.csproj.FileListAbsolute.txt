@@ -1,0 +1,16 @@
+D:\C#\SigmaProjectVideoAudio\BL\bin\Debug\BL.dll
+D:\C#\SigmaProjectVideoAudio\BL\bin\Debug\BL.pdb
+D:\C#\SigmaProjectVideoAudio\BL\bin\Debug\DAL.dll
+D:\C#\SigmaProjectVideoAudio\BL\bin\Debug\EntityFramework.dll
+D:\C#\SigmaProjectVideoAudio\BL\bin\Debug\DAL.pdb
+D:\C#\SigmaProjectVideoAudio\BL\bin\Debug\EntityFramework.xml
+D:\C#\SigmaProjectVideoAudio\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+D:\C#\SigmaProjectVideoAudio\BL\obj\Debug\BL.dll
+D:\C#\SigmaProjectVideoAudio\BL\obj\Debug\BL.pdb
+D:\C#\SigmaProjectVideoAudio\BL\bin\Debug\en\BL.resources.dll
+D:\C#\SigmaProjectVideoAudio\BL\obj\Debug\BL.Resources.Material.resources
+D:\C#\SigmaProjectVideoAudio\BL\obj\Debug\BL.Resources.Material.en.resources
+D:\C#\SigmaProjectVideoAudio\BL\obj\Debug\BL.csproj.GenerateResource.Cache
+D:\C#\SigmaProjectVideoAudio\BL\obj\Debug\en\BL.resources.dll
+D:\C#\SigmaProjectVideoAudio\BL\obj\Debug\BL.Resources.AccountsStrings.resources
+D:\C#\SigmaProjectVideoAudio\BL\obj\Debug\BL.Resources.AccountsStrings.en.resources

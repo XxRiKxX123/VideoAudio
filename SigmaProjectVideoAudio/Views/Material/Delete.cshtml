@@ -1,0 +1,81 @@
+﻿@model BL.MaterialModels.MaterialDelete
+
+@{    
+    var material = Resx.MaterialStrings.materials;
+    var name = Resx.MaterialStrings.name;
+    var namefile = Resx.MaterialStrings.namefile;
+    var create = Resx.MaterialStrings.create;
+    var edit = Resx.MaterialStrings.edit;
+    var delete = Resx.MaterialStrings.delete;
+    var anon = Resx.MaterialStrings.anon;
+    var type = Resx.MaterialStrings.type;
+    var category = Resx.MaterialStrings.category;
+    var size = Resx.MaterialStrings.size;
+    var backtolist = Resx.MaterialStrings.bacltolist;
+}
+
+@{
+    ViewBag.Title = @Html.Encode(delete);
+}
+
+
+
+<h1>@Html.Encode(delete)</h1>
+<fieldset>
+    <div class="display-label">
+        №:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID)
+    </div>
+
+    <div class="display-label">
+        @Html.Encode(name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+        @Html.Encode(category)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category)
+    </div>
+
+    <div class="display-label">
+        @Html.Encode(anon)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Annotation)
+    </div>
+
+    <div class="display-label">
+        @Html.Encode(type)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Type)
+    </div>
+
+    <div class="display-label">
+        @Html.Encode(namefile)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NameFile)
+    </div>
+
+    <div class="display-label">
+       @Html.Encode(size)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SizeFile)
+    </div>
+</fieldset>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value=@delete /> |
+        @Html.ActionLink(backtolist, "Index", "Home")
+    </p>
+}

@@ -1,0 +1,10 @@
+D:\C#\SigmaProjectVideoAudio\DAL\bin\Debug\DAL.dll.config
+D:\C#\SigmaProjectVideoAudio\DAL\bin\Debug\DAL.dll
+D:\C#\SigmaProjectVideoAudio\DAL\bin\Debug\DAL.pdb
+D:\C#\SigmaProjectVideoAudio\DAL\bin\Debug\EntityFramework.dll
+D:\C#\SigmaProjectVideoAudio\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\C#\SigmaProjectVideoAudio\DAL\bin\Debug\EntityFramework.xml
+D:\C#\SigmaProjectVideoAudio\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\C#\SigmaProjectVideoAudio\DAL\obj\Debug\DAL.dll
+D:\C#\SigmaProjectVideoAudio\DAL\obj\Debug\DAL.pdb
+D:\C#\SigmaProjectVideoAudio\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

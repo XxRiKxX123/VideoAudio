@@ -1,0 +1,26 @@
+﻿@model BL.MaterialModels.MaterialInfo
+
+@{
+    var search = Resx.MaterialStrings.search;
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.search)
+                @Html.ValidationMessageFor(model => model.search)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value=@search class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}

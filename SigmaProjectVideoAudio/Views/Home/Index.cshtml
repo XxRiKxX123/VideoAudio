@@ -1,0 +1,65 @@
+﻿@model IEnumerable<BL.MaterialModels.MaterialInfo>
+@{
+    var material = Resx.MaterialStrings.materials;
+    var name = Resx.MaterialStrings.name;
+    var namefile = Resx.MaterialStrings.namefile;
+    var create = Resx.MaterialStrings.create;
+    var edit = Resx.MaterialStrings.edit;
+    var delete = Resx.MaterialStrings.delete;
+    var anon = Resx.MaterialStrings.anon;
+    var type = Resx.MaterialStrings.type;
+    var category = Resx.MaterialStrings.category;
+    var size = Resx.MaterialStrings.size;
+}
+
+@{
+    ViewBag.Title = material;
+}
+<h2>@Html.Encode(material)</h2>
+
+<table border="0">
+    <tr>
+        <td>№:</td>
+        <td>@Html.ActionLink(name, "Index", "Home", new { OrderBy = 1 }, "")</td>
+        <td>@Html.Encode(category)</td>
+        <td>@Html.Encode(anon)</td>
+        <td>@Html.Encode(type)</td>
+        <td>@Html.ActionLink(namefile, "Index", "Home", new { OrderBy = 2 }, "")</td>
+        <td>@Html.Encode(size)</td>
+        <td>@Html.ActionLink(create, "Create", "Material")</td>
+        <td></td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Annotation)
+            </td>
+            <td>
+                @Html.ActionLink(item.Type, "Index", "Home", new { type = item.Type }, "")
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameFile)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SizeFile)
+            </td>
+            <td>
+                @Html.ActionLink(edit, "Edit", "Material", new { id = item.ID }, "")
+            </td>
+            <td>
+                @Html.ActionLink(delete, "Delete", "Material", new { id = item.ID }, "")
+            </td>
+        </tr>
+    }
+</table>
+@Html.Partial("_Search", Model.FirstOrDefault())
